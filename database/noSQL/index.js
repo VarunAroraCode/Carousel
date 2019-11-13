@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/imageData', {
+mongoose.connect('mongodb://localhost/imageStuff', {
     useMongoClient: true
 });
 const db = mongoose.connection;
@@ -17,5 +17,6 @@ var schema = new mongoose.Schema({
         }
     ]
 })
-var imageList = mongoose.model('imageLists', schema)
- module.exports = imageList;
+
+var imageInfo = mongoose.model('imageInfo', schema)
+module.exports = imageInfo;
